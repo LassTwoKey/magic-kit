@@ -1,0 +1,17 @@
+.mk-dropdown {
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mk-dropdown__panel {
+  max-height: 244px;
+  padding: 4px 0;
+  overflow-y: auto;
+}
+
+/* TO DO: Сделать контент близким, адаптируемый по ширине динамически */
+.mk-dropdown__popper {
+  --popover-padding: 8px 0px;
+  --popover-box-shadow: 0 0 5px var(--mk-color-gray-400);
+}

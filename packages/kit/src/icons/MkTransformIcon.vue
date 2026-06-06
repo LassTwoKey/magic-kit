@@ -1,0 +1,24 @@
+<template>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="none"
+    viewBox="0 0 24 24"
+  >
+    <g clip-path="url(#a)">
+      <path
+        fill="currentColor"
+        d="M22 18v-2H8V4h2L7 1 4 4h2v2H2v2h4v8c0 1.1.9 2 2 2h8v2h-2l3 3 3-3h-2v-2zM10 8h6v6h2V8c0-1.1-.9-2-2-2h-6z"
+      />
+    </g>
+    <defs>
+      <clipPath id="a">
+        <path
+          fill="currentColor"
+          d="M0 0h24v24H0z"
+        />
+      </clipPath>
+    </defs>
+  </svg>
+</template>

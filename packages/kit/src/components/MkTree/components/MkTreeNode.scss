@@ -1,0 +1,149 @@
+.mk-tree-node {
+  &__content {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    height: 32px;
+    padding-right: 8px;
+    color: var(--mk-color-gray-600);
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+
+    &:hover {
+      background-color: var(--mk-color-gray-50);
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex: 1;
+    gap: 4px;
+    align-items: center;
+    min-width: 0;
+  }
+
+  &--selected > .mk-tree-node__content {
+    color: var(--mk-color-gray-800);
+    background-color: var(--mk-color-gray-300);
+  }
+
+  &--disabled > .mk-tree-node__content {
+    color: var(--mk-color-gray-400);
+    cursor: default;
+
+    .mk-tree-node__checkbox {
+      pointer-events: none;
+      cursor: default;
+    }
+
+    .mk-tree-node__label {
+      pointer-events: none;
+    }
+  }
+
+  // Чекбокс — фиксированная позиция слева
+  &__checkbox {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    padding-left: 8px;
+  }
+
+  &__checkbox-inner {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    color: var(--mk-color-white);
+    background-color: var(--mk-color-white);
+    border: 1px solid var(--mk-color-gray-300);
+    border-radius: 3px;
+
+    &--checked,
+    &--indeterminate {
+      background-color: var(--mk-color-primary);
+      border-color: var(--mk-color-primary);
+    }
+  }
+
+  &__checkbox-icon {
+    width: 10px;
+    height: 10px;
+  }
+
+  // Стрелка раскрытия
+  &__expand {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__expand-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--mk-color-gray-500);
+    transition: transform 0.2s ease;
+
+    .mk-tree-node--expanded > .mk-tree-node__content .mk-tree-node__inner & {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__loading-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--mk-color-primary);
+    animation: mk-tree-node-spin 1s linear infinite;
+  }
+
+  // Иконка узла
+  &__icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    color: var(--mk-color-gray-500);
+  }
+
+  &__folder-icon {
+    width: 18px;
+    height: 18px;
+    color: var(--mk-color-primary);
+  }
+
+  // Метка
+  &__label {
+    flex: 1;
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    user-select: none;
+  }
+
+  // Дочерние узлы
+  &__children {
+    // Рекурсивный контейнер
+  }
+}
+
+@keyframes mk-tree-node-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,23 @@
+.mk-popover {
+  --popover-padding: 8px 12px;
+  --popover-color: var(--mk-color-gray-800);
+  --popover-background: var(--mk-color-white);
+  --popover-border-radius: 4px;
+  --popover-box-shadow: 0 0 10px 0 var(--mk-color-gray-400);
+
+  padding: var(--popover-padding);
+  color: var(--popover-color);
+  background: var(--popover-background);
+  border-radius: var(--popover-border-radius);
+  box-shadow: var(--popover-box-shadow);
+
+  .mk-popper-arrow::before {
+    background-color: var(--popover-background);
+  }
+
+  &--dark {
+    --popover-color: var(--mk-color-white);
+    --popover-background: var(--mk-color-gray-800);
+    --popover-box-shadow: 0 0 10px 0 var(--mk-color-gray-600);
+  }
+}

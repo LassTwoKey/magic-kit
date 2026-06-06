@@ -1,0 +1,54 @@
+.mk-popper-content {
+  position: absolute;
+  z-index: 2000;
+  min-width: 10px;
+  overflow: visible !important;
+  word-break: normal;
+  overflow-wrap: break-word;
+  visibility: visible;
+
+  &--pure {
+    padding: 0;
+  }
+}
+
+$placements: (
+  'top': 'bottom',
+  'bottom': 'top',
+  'left': 'right',
+  'right': 'left',
+);
+
+@each $placement, $opposite in $placements {
+  .mk-popper-content[data-popper-placement^='#{$placement}'] > .mk-popper-arrow {
+    #{$opposite}: -5px;
+
+    &::before {
+      @if $placement == top {
+        border-bottom-right-radius: 2px;
+      }
+
+      @if $placement == bottom {
+        border-top-left-radius: 2px;
+      }
+
+      @if $placement == left {
+        border-top-right-radius: 2px;
+      }
+
+      @if $placement == right {
+        border-bottom-left-radius: 2px;
+      }
+    }
+  }
+}
+
+@each $placement, $adjacency in ('top': 'left', 'bottom': 'right', 'left': 'bottom', 'right': 'top')
+{
+  .mk-popper-content[data-popper-placement^='#{$placement}'] > {
+    .mk-popper-arrow::before {
+      border-#{$placement}-color: transparent !important;
+      border-#{$adjacency}-color: transparent !important;
+    }
+  }
+}

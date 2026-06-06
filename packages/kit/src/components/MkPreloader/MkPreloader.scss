@@ -1,0 +1,54 @@
+.mk-preloader {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &__svg {
+    width: 100%;
+    height: 100%;
+    animation: mk-preloader-rotate 1s linear infinite;
+  }
+
+  &__track {
+    fill: none;
+    stroke: var(--mk-color-primary-200);
+    stroke-width: 2;
+  }
+
+  &__arc {
+    fill: none;
+    stroke: var(--mk-color-primary);
+    stroke-dasharray: 28 18;
+    stroke-linecap: round;
+    stroke-width: 2;
+    animation: mk-preloader-dash 1.2s ease-in-out infinite;
+  }
+}
+
+@keyframes mk-preloader-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes mk-preloader-dash {
+  0% {
+    stroke-dasharray: 1 47;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 28 18;
+    stroke-dashoffset: -8;
+  }
+
+  100% {
+    stroke-dasharray: 1 47;
+    stroke-dashoffset: -46;
+  }
+}

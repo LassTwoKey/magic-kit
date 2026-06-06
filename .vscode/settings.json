@@ -1,0 +1,13 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.rulers": [100],
+  "stylelint.validate": ["css", "scss", "vue"],
+  "stylelint.packageManager": "yarn",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.probe": ["javascript", "typescript", "vue"],
+  "eslint.enable": true
+}

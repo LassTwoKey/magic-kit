@@ -1,0 +1,15 @@
+:root {
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--mk-font-family);
+  font-size: var(--mk-font-size-md);
+  font-weight: var(--body-font-weight); // todo
+  line-height: var(--mk-line-height-md);
+  color: var(--body-color); // todo
+  text-align: left;
+  background-color: var(--body-bg); // todo
+}

@@ -1,0 +1,12 @@
+.mk-tooltip {
+  padding: 8px 16px;
+  color: var(--mk-color-white);
+  background: var(--mk-color-gray-800);
+  border: 1px solid var(--mk-color-gray-800);
+  border-radius: 3px;
+  box-shadow: 0 0 5px 0 var(--mk-color-gray-400);
+
+  .mk-popper-arrow::before {
+    background-color: var(--mk-color-gray-800);
+  }
+}

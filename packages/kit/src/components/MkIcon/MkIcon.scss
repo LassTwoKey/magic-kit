@@ -1,0 +1,17 @@
+.mk-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  font-size: 1em;
+  font-size: 1lh;
+  line-height: 1em;
+  color: inherit;
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
+}

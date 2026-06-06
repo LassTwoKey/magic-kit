@@ -1,0 +1,22 @@
+.mk-divider {
+  position: relative;
+
+  &--horizontal {
+    display: block;
+    width: 100%;
+    height: 0;
+    margin: 0;
+    border-top: 1px solid var(--mk-color-gray-300);
+  }
+
+  &--vertical {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 1em;
+    height: 1lh;
+    margin: 0;
+    vertical-align: middle;
+    border-left: 1px solid var(--mk-color-gray-300);
+  }
+}
