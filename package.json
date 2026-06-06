@@ -12,7 +12,7 @@
     "storybook": "yarn workspace @magic/kit storybook",
     "build-storybook": "yarn workspace @magic/kit build-storybook",
     "test-storybook": "yarn workspace @magic/kit test-storybook",
-    "chromatic": "yarn workspace @magic/kit chromatic"
+    "chromatic": "yarn workspace @magic/kit chromatic --project-token=your-project-token"
   },
   "workspaces": [
     "packages/*",

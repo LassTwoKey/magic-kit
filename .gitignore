@@ -49,6 +49,10 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Environment variable files
+.env
+.env.*
+
 
 *storybook.log
 storybook-static
