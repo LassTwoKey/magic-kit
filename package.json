@@ -11,7 +11,8 @@
     "create-component": "tsx scripts/create-component.ts",
     "storybook": "yarn workspace @magic/kit storybook",
     "build-storybook": "yarn workspace @magic/kit build-storybook",
-    "test-storybook": "yarn workspace @magic/kit test-storybook"
+    "test-storybook": "yarn workspace @magic/kit test-storybook",
+    "chromatic": "yarn workspace @magic/kit chromatic"
   },
   "workspaces": [
     "packages/*",
